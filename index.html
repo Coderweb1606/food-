@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <style>
+    label,h2,p,a,h5,button,ul {
+   font-style: italic;
+   font-weight: bold;
+   color: rgb(250, 180, 75); /* First shade */
+    }
+    
+
+    .navbar-collapse  .nav-link{
+        font-style: italic;
+        font-size: larger;
+        color: #d51111;
+    }
+    .navbar-collapse .nav-link:hover {
+            color: #1393b7;
+    }
+.offcanvas-body .nav-link{
+    font-style: italic;
+        font-size: larger;
+        color: #3fd511;
+}
+.offcanvas-body .nav-link:hover{
+    color: #1393b7;
+}
+   
+
+    .carousel-item {
+      text-align: center;
+    
+    }
+
+    .carousel-card {
+      background: #f8f9fa;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-card .reviewer-name {
+      font-weight: bold;
+    }
+
+    .carousel-card .review-text {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
+    .carousel-card .rating {
+      color: #fd5e29;
+    }
+    
+    .card-img-top{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+}
+    @media (max-width: 768px) {
+      .carousel-card {
+        padding: 15px;
+      }
+    }
+  </style>
+<body style="background-color: beige;">
+  
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg  navbar-dark" style="background: linear-gradient(90deg, rgb(255, 102, 0), rgb(255, 51, 145)); /* Two shades of RGB */
+      ">
+        <div class="container-fluid">
+          <a class="navbar-brand " href="#">
+        
+            <img src="burger.png" alt="" width="36" height="30" class="d-inline-block align-text-top   "> My Brand </a>
+            
+            <button class="btn btn-outline-light d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="width: 270px;">
+                <div class="offcanvas-header " style="text-align: center; justify-content: center;" >
+                  <a class="navbar-brand " href="#" style="color: black;">
+        
+                    <img src="burger.png" alt="" width="36" height="30" class="d-inline-block align-text-top   "> My Brand </a>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" style="
+                     justify-content: end;" ></button>
+                    
+                </div>
+                
+                <div class="offcanvas-body nav" >
+                 
+                    <ul class="navbar-nav  flex-grow-1 pe-3" style="text-align: center;" >
+                        <li class="nav-item">
+                            <a class="nav-link  " aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">es</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item" style="justify-content: start;">
+                            <a class="nav-links" href="#">Contact</a>
+                        </li>
+                        <p class=" p px-1">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                    </ul>
+                    
+                </div>
+               
+            </div>
+       
+            
+            <div class="collapse navbar-collapse  "style="justify-content:center ;text-align: center;">
+           
+
+                <ul class="navbar-nav ms-auto  px-2 ">
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#">act</a>
+                    </li>
+                </ul>
+                <div class="Danger ms-auto " >
+                    <h2> <button type="button" class="btn btn-outline-danger "  style="color: #f8f9fa; font-weight: 60; " >Book Table</button></h2>
+                   </div>
+            </div>
+           
+        </div>
+    </nav>
+
+  <!-- CAROUSEL -->
+  <div id="carouselExampleInterval mb-5" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000" >
+        <img src="3.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="21.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-captionc d-none d-md-block ">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="1.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <button><a href="">link</a></button>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+ 
+
+  <!-- food  -->
+ 
+<div class="container  mb-3"  >
+  <h2 class="book mb-3" style="text-align: center;"> BOOK TABLE </h2>
+  <div class="nav nav-pills nav-fill px-1 mb-3 gap-1" >
+    <a class="nav-link " href="#" style="
+      color: black;"><img src="consult_2304450.png"style="height: 40px; width: 42px; border-radius: 60px; "> 24/7 Service</a>
+    <a class="nav-link" href="#" style="color: black;"><img src="food-delivery_10638655.png"style="height: 50px; width: 52px; border-radius: 60px;"> Fast Order</a>
+    <a class="nav-link" href="#" style="color: black;"><img src="chef_17023235.png"style="height: 50px; width: 52px; border-radius: 60px;">  Master Chefs</a>
+
+    <a class="nav-link " href="#" style="color: black;"><img src="food-app_4363256.png"style="height: 50px; width: 52px; border-radius: 60px;">  Online Order</a>
+    <a class="nav-link " href="#" style="color: black;"><img src="quality_17577718.png"style="height: 50px; width: 52px; border-radius: 60px;"> Quality Food
+    </a>
+</div>  
+ 
+ <!--  ABOUT ME-->
+   <section class="about">
+ <div class="about px-3">
+  <h2 class="book mb-3 px-3" style="text-align: center;">  ABOUT ME </h2>
+
+    <div class="row g-1 mb-3 ">
+      <div class="col-md-6 px-3 ">
+        <img src="1.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-5  px-2">
+        <div class="card-body">
+  
+          <h1 class="card-title mb-3"style="text-align: center;">Welcome to Restoran</h1>
+          <p class="card-text">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos erat ipsum et lorem et sit, sed stet lorem sit. <br>
+<br>
+            Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+
+</section>
+<!-- Booing table-->
+
+
+<div class="container  mb-3"  >
+  <h2 class="book mb-3" style="text-align: center;"> BOOK TABLE </h2>
+  <div class="row">
+    <div class="col-md-5  mb-3">
+      <img src="hero.png" class="img-fluid" alt="" style="height: 280px; ">
+    </div>
+    <div class="col-md-6 ">
+     
+      <form>
+        <div class="row mb-3">
+          <div class="col">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" placeholder=" name" aria-label=" name">
+          </div>
+          <div class="col">
+
+            <label for="date">Date:</label>
+            
+            <input type="date" class="form-control" id="date" name="date">
+            
+            </div>
+            
+            
+         
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+          <label for="time">Time</label>
+          <input type="time" class="form-control" id="time">
+         
+        </div>
+        <div class="col">
+          <label for="email">Person</label>
+        
+          <select class="form-select" id="specificSizeSelect">
+            <option selected>Person</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        </div>
+        
+        <div class="row mb-3">
+          <div class="col">
+            <label for="name">Phone</label>
+            <input type="text" class="form-control" placeholder="Phone" aria-label="Phone">
+          </div>
+          <div class="col">
+            <label for="name">Email</label>
+            <input type="text" class="form-control" placeholder="Email" aria-label="Email">
+          </div>
+         
+        </div >
+        <button type="submit" class="btn btn-primary mb-3 " >Book Now</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Service --> 
+<div class="container  mb-3"  >
+  <h2 class="book mb-3" style="text-align: center;"> Food Menu </h2>
+  <div class="nav nav-pills nav-fill px-3 mb-3 gap-2" >
+    <a class="nav-link " href="#" style="color: black;"><img src="food_10981326.png"style="height: 50px; width: 52px; border-radius: 60px; "> Snack</a>
+    
+    <a class="nav-link " href="#" style="color: black;"><img src="bread_10848634.png"style="height: 50px; width: 52px; border-radius: 60px; "> Breakfast</a>
+    <a class="nav-link" href="#" style="color: black;"><img src="lunch_10516466.png"style="height: 50px; width: 52px; border-radius: 60px;"> Launch</a>
+    <a class="nav-link" href="#" style="color: black;"><img src="dinner_10634098.png"style="height: 50px; width: 52px; border-radius: 60px;">  Dinner</a>
+    <a class="nav-link " href="#" style="color: black;"><img src="cocktail_1210875.png"style="height: 50px; width: 52px; border-radius: 60px; "> Drink</a>
+    
+</div>  
+<!-- Team Members-->
+<h2 class="book mb-3" style="text-align: center;"> Meet Our Chef</h2>
+
+
+
+  <div class="container my-5">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-4 g-4">
+      <div class="col">
+        <div class="card">
+          <img src="sh1.jpg" class="cards-img-top" alt="...">
+          <div class="card-body text-align-centetr"style="text-align: center;">
+            <h5 class="card-title">Card title 1</h5>
+         
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="sh3.jpg" class="cards-img-top" alt="...">
+          <div class="card-body"style="text-align: center;">
+            <h5 class="card-title">Card title 2</h5>
+           
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="sh4.jpg" class="cards-img-top" alt="...">
+          <div class="card-body"style="text-align: center;">
+            <h5 class="card-title">Card title 3</h5>
+           
+            
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="sh2.jpg" class="cards-img-top" alt="...">
+          <div class="card-body"style="text-align: center;">
+            <h5 class="card-title">Card title 4</h5>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!--feedback-->
+
+   <div class="container my-5 ">
+    <div id="reviewCarousel" class="carousel slide carousel-dark " data-bs-ride="carousel">
+        <div class="carousel-indicators  " >
+            <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+      <div class="carousel-inner">
+        <!-- Carousel Item 1 -->
+        <div class="carousel-item active " style="  padding: 20px;">
+  
+  
+          <div class="carousel-card">
+            <img src="st1.jpg" alt="User Photo" class="card-img-top">
+            <h3 class="reviewer-name">John Doe</h3>
+            <p class="review-text">"This is a great product! It helped me improve my workflow and increased productivity. Highly recommend it!"</p>
+            <div class="rating">
+              ★★★★☆
+            </div>
+   
+          </div>
+        </div>
+        <!-- Carousel Item 2 -->
+        <div class="carousel-item"style="  padding: 20px;">
+          <div class="carousel-card">
+            <img src="st4.jpg" alt="User Photo" class="card-img-top">
+            <h3 class="reviewer-name">Jane Smith</h3>
+            <p class="review-text">"Excellent customer service and fast delivery. The quality is top-notch, and I will definitely buy again!"</p>
+            <div class="rating">
+              ★★★★★
+            </div>
+          </div>
+        </div>
+        <!-- Carousel Item 3 -->
+        <div class="carousel-item"  style="  padding: 20px;">
+          <div class="carousel-card">
+            <img src="st6.jpg" alt="User Photo" class="card-img-top">
+            <h3 class="reviewer-name">Emily Johnson</h3>
+            <p class="review-text">"The product is good, but there were some issues with the packaging. However, the support team handled it well."</p>
+            <div class="rating">
+              ★★★★★
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev " type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next w" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- Footer-->
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script></html>
